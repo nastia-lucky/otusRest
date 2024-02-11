@@ -1,15 +1,18 @@
 package tests;
 
 import assertions.PetAssertions;
-import providers.DataProvider;
 import models.pets.PetDTO;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import providers.DataProvider;
 import utils.BaseTest;
 import java.util.List;
 
 public class PetTests extends BaseTest {
 
+  /**
+   * Test checks pet with different data can be created
+   */
   @Test(dataProvider = "petCreationData", dataProviderClass = DataProvider.class)
   public void createPetTest(PetDTO pet) {
     petService.createPet(pet);
@@ -22,6 +25,9 @@ public class PetTests extends BaseTest {
     softAssert.assertAll();
   }
 
+  /**
+   * Test checks created pet can be found by status
+   */
   @Test(dataProvider = "petDataByStatus", dataProviderClass = DataProvider.class)
   public void getCreatedPetByStatus(PetDTO pet) {
     petService.createPet(pet);
@@ -32,6 +38,9 @@ public class PetTests extends BaseTest {
     softAssert.assertAll();
   }
 
+  /**
+   * Test checks pet with different data can be removed
+   */
   @Test(dataProvider = "petCreationData", dataProviderClass = DataProvider.class)
   public void removePetTest(PetDTO pet) {
     petService.createPet(pet);
@@ -42,6 +51,9 @@ public class PetTests extends BaseTest {
     softAssert.assertAll();
   }
 
+  /**
+   * Test checks already removed pet can not be removed again
+   */
   @Test(dataProvider = "petCreationData", dataProviderClass = DataProvider.class)
   public void removeAlreadyRemovedPetTest(PetDTO pet) {
     petService.createPet(pet);
@@ -52,6 +64,9 @@ public class PetTests extends BaseTest {
     softAssert.assertAll();
   }
 
+  /**
+   * Test checks pet can be updated
+   */
   @Test(dataProvider = "petUpdateData", dataProviderClass = DataProvider.class)
   public void updatedPetTest(PetDTO pet, PetDTO updatedPetData) {
     petService.createPet(pet);

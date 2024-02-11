@@ -1,0 +1,1 @@
+It is needed to run "mvn clean test" command for test launch

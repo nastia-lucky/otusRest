@@ -1,0 +1,7 @@
+<suite name="Otus tests">
+    <test name="Otus tests">
+        <classes>
+            <class name="tests.PetTests"></class>
+        </classes>
+    </test>
+</suite>

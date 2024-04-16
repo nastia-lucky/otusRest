@@ -2,5 +2,5 @@ package utils;
 
 public class BaseUtils {
 
-  protected static final String MY_URL = "https://petstore.swagger.io/v2/";
+  protected static final String MY_URL = System.getProperty("url");
 }

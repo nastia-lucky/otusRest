@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import providers.DataProvider;
 import services.PetService;
-import utils.BaseTest;
 import java.util.List;
 
 @Guice(modules = GuiceModule.class)

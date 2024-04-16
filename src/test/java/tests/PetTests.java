@@ -1,14 +1,23 @@
 package tests;
 
 import assertions.PetAssertions;
+import com.google.inject.Inject;
 import models.pets.PetDTO;
+import modules.GuiceModule;
+import org.testng.annotations.Guice;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import providers.DataProvider;
+import services.PetService;
 import utils.BaseTest;
 import java.util.List;
 
-public class PetTests extends BaseTest {
+@Guice(modules = GuiceModule.class)
+public class PetTests  {
+
+
+  @Inject
+  private PetService petService;
 
   /**
    * Test checks pet with different data can be created

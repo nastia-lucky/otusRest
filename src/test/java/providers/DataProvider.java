@@ -30,10 +30,10 @@ public class DataProvider {
   public static Object[][] petDataByStatus() {
     PetDTO pet1 = new PetDTO(1, new PetCategory(1, "my category"), "dog name", Arrays.asList("url"), Arrays.asList(new PetTag(1, "tag 1")), "s");
     PetDTO pet2 = new PetDTO(2, null, "dog name", Arrays.asList("url"), Arrays.asList(new PetTag(1, "tag 1")), "looooooooong status  looooooooong status  looooooooong status  looooooooong status ");
-    PetDTO pet3 = new PetDTO(3, new PetCategory(5, "s"), null, Arrays.asList("url"), Arrays.asList(new PetTag(1, "tag 1")), "");
+    PetDTO pet3 = new PetDTO(3, new PetCategory(5, "s"), null, Arrays.asList("url"), Arrays.asList(new PetTag(1, "tag 1")), "my status");
     PetDTO pet4 = new PetDTO(4, new PetCategory(6, "category"), "m", new ArrayList<String>(), Arrays.asList(new PetTag(1, "tag 1")), "234");
     PetDTO pet5 = new PetDTO(5, new PetCategory(7, ""), "my cat", Arrays.asList("url", "another url"), Arrays.asList(new PetTag(1, null)), "normal status");
-    PetDTO pet6 = new PetDTO(6, new PetCategory(8, "s"), "m", Arrays.asList("url", "another url"), new ArrayList<PetTag>(), "2");
+    PetDTO pet6 = new PetDTO(6, new PetCategory(8, "s"), "m", Arrays.asList("url", "another url"), new ArrayList<PetTag>(), "278");
     return new Object[][]{{pet1}, {pet2}, {pet3}, {pet4}, {pet5}, {pet6}}
         ;
   }
